@@ -2,33 +2,37 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package paquete01;
+package tabla_Hash;
+
+import java.util.Scanner;
 
 /**
  *
- * @author D E L L
+ * @author Usuario
  */
-public class Ejecutor {
+public class Tabla_Hash {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Metodos m = new Metodos();
-        int op;
+
+        Metodos tablaHash = new Metodos();
+        int opc;
 
         do {
-            op = m.menu();
-            switch (op) {
+            opc = tablaHash.menu();
+            switch (opc) {
                 case 1 -> {
                     System.out.print("Ingrese un nombre: ");
-                    String nombre = m.entrada.next();
-                    m.llenarTabla(nombre);
+                    String nombre = tablaHash.entrada.next().toUpperCase();
+                    tablaHash.insertar(nombre);
                 }
                 case 2 -> {
-                    System.out.printf("%s\n", m.recorrer());
+                    System.out.printf("%s\n", tablaHash.recorrer());
                 }
             }
-        } while (op != 0);
+        } while (opc != 0);
     }
+    
 }
