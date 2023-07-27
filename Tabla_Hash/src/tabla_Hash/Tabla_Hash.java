@@ -29,7 +29,7 @@ public class Tabla_Hash {
                     tablaHash.insertar(nombre);
                 }
                 case 2 -> {
-                    System.out.printf("%s\n", tablaHash.recorrer());
+                    System.out.printf("%s\n", tablaHash.presentar());
                 }
             }
         } while (opc != 0);

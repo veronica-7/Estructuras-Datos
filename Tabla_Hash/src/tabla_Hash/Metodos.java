@@ -54,7 +54,7 @@ public class Metodos {
         }
     }
     
-    public String recorrer() {
+    public String presentar() {
         String cadena = String.format("\n¡ T A B L A  H A S H !\n");
         
         for (int i = 0; i < tabla.length; i++) {
